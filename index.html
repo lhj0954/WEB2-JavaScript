@@ -4,6 +4,32 @@
     <meta charset="UTF-8">
     <title>IndexPage</title>
     <!-- <link rel="syltesheet" href="style.css"> -->
+    <script>
+        function nightDayHandler(self) {
+            var target = document.querySelector('body');
+            var a_list = document.querySelectorAll('a');
+            if (self.value === 'night') {
+                target.style.backgroundColor='hsl(255, 5%, 15%)';
+                target.style.color='white';
+                self.value = 'day';
+                
+                var i = 0;
+                while (i < a_list.length) {
+                    a_list[i].style.color='powderblue';
+                    i += 1;
+                }
+            } else {
+                target.style.backgroundColor='white';
+                target.style.color='black';
+                self.value = 'night';
+                var i = 0;
+                while (i < a_list.length) {
+                    a_list[i].style.color='blue';
+                    i += 1;
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
@@ -37,7 +63,7 @@
             this.value = 'night';
         }
     "> -->
-    <input type="button" value="night" onclick="
+    <!-- <input type="button" value="night" onclick="
         var target = document.querySelector('body');
         if (this.value === 'night') {
             target.style.backgroundColor='hsl(255, 5%, 15%)';
@@ -48,7 +74,32 @@
             target.style.color='black';
             this.value = 'night';
         }
-    ">
+    "> -->
+    <!-- <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        var a_list = document.querySelectorAll('a');
+        if (this.value === 'night') {
+            target.style.backgroundColor='hsl(255, 5%, 15%)';
+            target.style.color='white';
+            this.value = 'day';
+            
+            var i = 0;
+            while (i < a_list.length) {
+                a_list[i].style.color='powderblue';
+                i += 1;
+            }
+        } else {
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            this.value = 'night';
+            var i = 0;
+            while (i < a_list.length) {
+                a_list[i].style.color='blue';
+                i += 1;
+            }
+        }
+    "> -->
+    <input type="button" value="night" onclick="nightDayHandler(this)">
     <ul>
         <li><a href="1.html">첫번째 페이지</a></li>
         <li><a href="2.html">두번째 페이지</a></li>
