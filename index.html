@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IndexPage</title>
+    <!-- <link rel="syltesheet" href="style.css"> -->
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <!-- <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor='hsl(255, 5%, 15%)';
+        document.querySelector('body').style.color='white';
+    ">
+    <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+    "> -->
+    <!-- <input id="night_day" type="button" value="night" onclick="
+        if (document.querySelector('#night_day').value === 'night') {
+            document.querySelector('body').style.backgroundColor='hsl(255, 5%, 15%)';
+            document.querySelector('body').style.color='white';
+            document.querySelector('#night_day').value = 'day';
+        } else {
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            document.querySelector('#night_day').value = 'night';
+        }
+    "> -->
+    <!-- <input type="button" value="night" onclick="
+        if (this.value === 'night') {
+            document.querySelector('body').style.backgroundColor='hsl(255, 5%, 15%)';
+            document.querySelector('body').style.color='white';
+            this.value = 'day';
+        } else {
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            this.value = 'night';
+        }
+    "> -->
+    <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        if (this.value === 'night') {
+            target.style.backgroundColor='hsl(255, 5%, 15%)';
+            target.style.color='white';
+            this.value = 'day';
+        } else {
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            this.value = 'night';
+        }
+    ">
+    <ul>
+        <li><a href="1.html">첫번째 페이지</a></li>
+        <li><a href="2.html">두번째 페이지</a></li>
+        <li><a href="3.html">세번째 페이지</a></li>
+    </ul>
+    <p>
+        <h2>WEB</h2>
+    </p>
+    <p>
+        웹이 어쩌구 저쩌구
+    </p>
+</body>
+</html>
