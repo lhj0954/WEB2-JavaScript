@@ -4,32 +4,8 @@
     <meta charset="UTF-8">
     <title>IndexPage</title>
     <!-- <link rel="syltesheet" href="style.css"> -->
-    <script>
-        function nightDayHandler(self) {
-            var target = document.querySelector('body');
-            var a_list = document.querySelectorAll('a');
-            if (self.value === 'night') {
-                target.style.backgroundColor='hsl(255, 5%, 15%)';
-                target.style.color='white';
-                self.value = 'day';
-                
-                var i = 0;
-                while (i < a_list.length) {
-                    a_list[i].style.color='powderblue';
-                    i += 1;
-                }
-            } else {
-                target.style.backgroundColor='white';
-                target.style.color='black';
-                self.value = 'night';
-                var i = 0;
-                while (i < a_list.length) {
-                    a_list[i].style.color='blue';
-                    i += 1;
-                }
-            }
-        }
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="colors.js"></script>
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
